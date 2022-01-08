@@ -11,3 +11,12 @@
   - name: Greet Hola in /tmp/prueba/prueba.txt contains "Hola"
     fail: msg="Error"
     when: checkmyconf.rc != 0
+    
+  - name: Greet Hola in /tmp/prueba/prueba.txt contains "Hola"
+    fail: msg="Error"
+    when: checkmyconf.rc != 0
+    
+  - name: Delete content & directory
+    file:
+      state: absent
+      path: /tmp/prueba/
