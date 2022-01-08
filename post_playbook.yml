@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  become: true
   tasks:
   - name: Check Hola
     command: grep -Fxq "hola" /tmp/prueba/prueba.txt
@@ -12,4 +11,3 @@
   - name: Greet Hola in /tmp/prueba/prueba.txt contains "Hola"
     fail: msg="Error"
     when: checkmyconf.rc != 0
-ailed:
