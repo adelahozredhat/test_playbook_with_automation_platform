@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: Create a directory if it does not exist
-    ansible.builtin.file:
+    file:
       path: /tmp/prueba
       state: directory
       mode: '0755'
