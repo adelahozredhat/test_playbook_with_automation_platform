@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
   - name: Check Hola
     command: grep -Fxq "hola" /tmp/prueba/prueba.txt
