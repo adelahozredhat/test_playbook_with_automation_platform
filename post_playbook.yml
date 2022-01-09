@@ -8,12 +8,12 @@
         register: get_text
 
       - name: check text exists
-        when: get_text.stdout.find('hola') != -1
+        when: get_text.stdout.find('Hola') != -1
         debug: msg="message exists"
 
       - name: Greet Hola in /tmp/prueba/prueba.txt contains "Hola"
         fail: msg="Error"
-        when: get_text.stdout.find('hola') == -1
+        when: get_text.stdout.find('Hola') == -1
       
     always:
       - name: Delete content & directory
